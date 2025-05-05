@@ -1,4 +1,4 @@
-package com.example.dreik
+package com.example.dreik.presentation.mainActivity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
