@@ -38,7 +38,9 @@ fun BottomNavigation(
     onItemClick: (Int) -> Unit
 ) {
     NavigationBar(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(105.dp),
         containerColor = MaterialTheme.colorScheme.background,
         tonalElevation = 10.dp
     ) {
@@ -51,7 +53,7 @@ fun BottomNavigation(
                         Icon(
                             painter = painterResource(id = item.icon),
                             contentDescription = null,
-                            modifier = Modifier.size(IconSize),
+                            modifier = Modifier.size(24.dp),
                         )
                     }
                 },
@@ -59,7 +61,6 @@ fun BottomNavigation(
                     selectedIconColor = MaterialTheme.colorScheme.primary,
                     selectedTextColor = MaterialTheme.colorScheme.primary,
                     unselectedIconColor = colorResource(id = R.color.body),
-                    indicatorColor = MaterialTheme.colorScheme.background
                 ),
             )
         }
