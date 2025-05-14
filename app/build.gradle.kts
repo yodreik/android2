@@ -60,9 +60,12 @@ dependencies {
 
     implementation("androidx.navigation:navigation-compose:2.8.9")
 
-    implementation("com.google.dagger:hilt-android:2.45")
-    kapt("com.google.dagger:hilt-compiler:2.45")
+    implementation("com.google.dagger:hilt-android:2.51")
+    kapt("com.google.dagger:hilt-compiler:2.51")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    kotlin("stdlib")
+
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
 
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.31.4-beta")
 }

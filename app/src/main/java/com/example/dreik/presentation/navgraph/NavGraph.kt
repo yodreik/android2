@@ -13,16 +13,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
 import com.example.dreik.presentation.home.HomeScreen
-
-@Composable
-fun NavGraph() {
-    val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = Route.HomeScreen.route) {
-        composable(route = Route.HomeScreen.route) {
-            HomeScreen()
-        }
-    }
-}
+import com.example.dreik.presentation.navigator.Navigator
+import com.example.dreik.presentation.profile.ProfileViewModel
 
 @Composable
 fun NavGraph(
@@ -31,13 +23,11 @@ fun NavGraph(
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = startDestination) {
-        navigation(
-            route = Route.HomeScreen.route,
-            startDestination = Route.HomeScreen.route
-        ) {
-            composable(route = Route.HomeScreen.route){
-                HomeScreen()
-            }
+        composable(Route.HomeScreen.route) {
+            Navigator()
+        }
+        composable(Route.ProfileScreen.route) {
+            // ProfileScreen()
         }
     }
 }

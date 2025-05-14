@@ -13,4 +13,10 @@ sealed class Route(
     object WorkoutScreen : Route(route = "workoutScreen")
 
     object HistoryScreen : Route(route = "historyScreen")
+
+    object AppStartNavigation : Route(route = "appStartNavigation")
+
+    object Navigation : Route(route = "navigation")
+
+    object NavigatorScreen : Route(route = "navigator")
 }

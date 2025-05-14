@@ -25,6 +25,7 @@ import androidx.core.view.WindowCompat
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import com.example.dreik.presentation.navgraph.NavGraph
 import dagger.hilt.android.AndroidEntryPoint
+import com.example.dreik.presentation.navgraph.Route
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -48,8 +49,7 @@ class MainActivity : ComponentActivity() {
                     )
                 }
                 Box(modifier = Modifier.background(MaterialTheme.colorScheme.background).fillMaxSize()) {
-                    NavGraph()
-//                    NavGraph(startDestination = viewModel.startDestination.value)
+                    NavGraph(startDestination = Route.HomeScreen.route)
                 }
             }
         }
